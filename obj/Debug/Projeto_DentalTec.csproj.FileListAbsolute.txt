@@ -1,0 +1,6 @@
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Projeto_DentalTec.csproj.AssemblyReference.cache
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Projeto_DentalTec.csproj.SuggestedBindingRedirects.cache
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\MainWindow.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\App.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Projeto_DentalTec_MarkupCompile.cache
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Projeto_DentalTec_MarkupCompile.lref

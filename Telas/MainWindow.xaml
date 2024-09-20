@@ -12,9 +12,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-
-
-
+        <!--dsakjldashdhads-->
+        
         <Border Height="500" Width="430" CornerRadius="30">
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
