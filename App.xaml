@@ -4,6 +4,29 @@
              xmlns:local="clr-namespace:Projeto_DentalTec"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Estilo global para TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="#112D4E"/>
+            <Setter Property="FontSize" Value="14"/>
+            <!--<Setter Property="Padding" Value="3,4"/>-->
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="TextDecorations" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="2">
+                            <ScrollViewer x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
     </Application.Resources>
 </Application>

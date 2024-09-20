@@ -55,6 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Telas\RecuperarSenha2.xaml.cs">
+      <DependentUpon>RecuperarSenha2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\RecuperarSenha3.xaml.cs">
+      <DependentUpon>RecuperarSenha3.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Telas\RecuperarSenha1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,10 +73,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Telas\RecuperarSenha1.xaml.cs">
+      <DependentUpon>RecuperarSenha1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Telas\RecuperarSenha2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\RecuperarSenha3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -97,6 +118,15 @@
   <ItemGroup>
     <Folder Include="Codigos\" />
     <Folder Include="Imagens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\padlock.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

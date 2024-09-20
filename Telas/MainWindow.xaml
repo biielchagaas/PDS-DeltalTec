@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projeto_DentalTec"
         mc:Ignorable="d"
+        WindowState="Maximized"
         Title="MainWindow" Height="450" Width="800">
     
     <Grid Background="#112D4E">
@@ -29,15 +30,15 @@
 
 
 
-            <Image Source="/Imagens/Logo.png" Width="170"
+            <Image Source="/ImagensLogin/Logo.png" Width="170"
                    Height="115" Margin="0 30 0 0"/>
 
 
 
-            <Image Source="/Imagens/user.png" Width="13" Margin="35 30 0 6" HorizontalAlignment="Left"/>
+            <Image Source="/ImagensLogin/user.png" Width="13" Margin="35 30 0 6" HorizontalAlignment="Left"/>
             <TextBlock Text="Usuário:" Margin="50 -23 0 5" FontSize="14" Foreground="#fff" FontFamily="Corbel"/>
             <TextBox Height="20" Width="190"/>
-            <Image Source="/Imagens/padlock.png" Width="13" Margin="35 30 0 6" HorizontalAlignment="Left"/>
+            <Image Source="/ImagensLogin/padlock.png" Width="13" Margin="35 30 0 6" HorizontalAlignment="Left"/>
             <TextBlock Text="Senha:" Margin="50 -23 0 5" FontSize="14" Foreground="#fff"/>
             <TextBox Height="20" Width="190" />
 
@@ -54,7 +55,7 @@
 
 
                 <TextBlock Text="Esqueceu a senha?" Foreground="White"
-                           Margin="0 9 0 0" Grid.Column="1" FontSize="10" TextDecorations="Underline" Cursor="Hand" MouseDown="AcessoRecuperarSenhaUm"/>
+                           Margin="0 9 0 0" Grid.Column="1" FontSize="10" TextDecorations="Underline" Cursor="Hand"/>
             </Grid>
 
 
