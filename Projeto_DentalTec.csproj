@@ -61,6 +61,18 @@
     <Compile Include="Telas\RecuperarSenha3.xaml.cs">
       <DependentUpon>RecuperarSenha3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Telas\RelatorioCaixa.xaml.cs">
+      <DependentUpon>RelatorioCaixa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\RelatorioConsulta.xaml.cs">
+      <DependentUpon>RelatorioConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\RelatorioFuncionario.xaml.cs">
+      <DependentUpon>RelatorioFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\RelatorioPaciente.xaml.cs">
+      <DependentUpon>RelatorioPaciente.xaml</DependentUpon>
+    </Compile>
     <Page Include="Telas\RecuperarSenha1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +97,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Telas\RecuperarSenha3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\RelatorioCaixa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\RelatorioConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\RelatorioFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\RelatorioPaciente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,6 +155,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ImagensLogin\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\icons8-relatório-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagensLogin\lupa2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

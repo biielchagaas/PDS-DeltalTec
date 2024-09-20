@@ -21,3 +21,11 @@ C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\Recupera
 C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RecuperarSenha3.g.cs
 C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\App.baml
 C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RecuperarSenha3.baml
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioCaixa.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioConsulta.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioFuncionario.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioPaciente.g.cs
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioCaixa.baml
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioConsulta.baml
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioFuncionario.baml
+C:\Users\saman\OneDrive\Documentos\GitHub\PDS-DentalTec\obj\Debug\Telas\RelatorioPaciente.baml
