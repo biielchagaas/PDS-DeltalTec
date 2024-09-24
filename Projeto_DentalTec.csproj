@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Telas\ConsultarPaciente.xaml.cs">
+      <DependentUpon>ConsultarPaciente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\RecuperarSenha2.xaml.cs">
       <DependentUpon>RecuperarSenha2.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,10 @@
     <Compile Include="Telas\RelatorioPaciente.xaml.cs">
       <DependentUpon>RelatorioPaciente.xaml</DependentUpon>
     </Compile>
+    <Page Include="Telas\ConsultarPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\RecuperarSenha1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Codigos\" />
-    <Folder Include="Imagens\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ImagensLogin\Logo.png" />
@@ -164,6 +170,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ImagensLogin\lupa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\agenda.png" />
+    <Resource Include="Imagens\book.png" />
+    <Resource Include="Imagens\calendar.png" />
+    <Resource Include="Imagens\cash.png" />
+    <Resource Include="Imagens\checkbox-unchecked.png" />
+    <Resource Include="Imagens\checked.png" />
+    <Resource Include="Imagens\edit.png" />
+    <Resource Include="Imagens\eye-closed.png" />
+    <Resource Include="Imagens\eye-open.png" />
+    <Resource Include="Imagens\group.png" />
+    <Resource Include="Imagens\list.png" />
+    <Resource Include="Imagens\new.png" />
+    <Resource Include="Imagens\option-selected.png" />
+    <Resource Include="Imagens\option.png" />
+    <Resource Include="Imagens\order-bottomtotop.png" />
+    <Resource Include="Imagens\order-toptobottom.png" />
+    <Resource Include="Imagens\printer.png" />
+    <Resource Include="Imagens\product.png" />
+    <Resource Include="Imagens\search.png" />
+    <Resource Include="Imagens\tool.png" />
+    <Resource Include="Imagens\trash.png" />
+    <Resource Include="Imagens\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
