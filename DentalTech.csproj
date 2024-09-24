@@ -212,46 +212,15 @@
     <Resource Include="Resource\IconOrcamento.png" />
     <Resource Include="Resource\IconPacientes.png" />
     <Resource Include="Resource\IconProdutos.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\IconServico.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\BotaoAnamnese.png" />
     <Resource Include="Resource\BotaoNovo.png" />
     <Resource Include="Resource\BotaoOrcamento.png" />
     <Resource Include="Resource\BotaoSalvar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\icons8-relatorio.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resource\lupa.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Imagens\agenda.png" />
-    <Resource Include="Imagens\book.png" />
-    <Resource Include="Imagens\calendar.png" />
-    <Resource Include="Imagens\cash.png" />
-    <Resource Include="Imagens\checkbox-unchecked.png" />
-    <Resource Include="Imagens\checked.png" />
-    <Resource Include="Imagens\edit.png" />
-    <Resource Include="Imagens\eye-closed.png" />
-    <Resource Include="Imagens\eye-open.png" />
-    <Resource Include="Imagens\group.png" />
-    <Resource Include="Imagens\list.png" />
-    <Resource Include="Imagens\new.png" />
-    <Resource Include="Imagens\option-selected.png" />
-    <Resource Include="Imagens\option.png" />
-    <Resource Include="Imagens\order-bottomtotop.png" />
-    <Resource Include="Imagens\order-toptobottom.png" />
-    <Resource Include="Imagens\printer.png" />
-    <Resource Include="Imagens\product.png" />
-    <Resource Include="Imagens\search.png" />
-    <Resource Include="Imagens\tool.png" />
-    <Resource Include="Imagens\trash.png" />
-    <Resource Include="Imagens\user.png" />
-  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
