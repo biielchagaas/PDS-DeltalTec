@@ -82,11 +82,11 @@
                 </Grid.ColumnDefinitions>
 
                 <CheckBox Content="Lembrar senha" Background="White" Foreground="White"
-                          FontSize="10" Margin="30 10 0 0" Grid.Column="0"/>
+                          FontSize="10" Margin="30 10 0 0" Grid.Column="0" FontFamily="Century Gothic"/>
 
 
                 <TextBlock Text="Esqueceu a senha?" Foreground="White"
-                           Margin="0 9 0 0" Grid.Column="1" FontSize="10" TextDecorations="Underline" Cursor="Hand"/>
+                           Margin="0 14 0 0" Grid.Column="1" FontSize="10" TextDecorations="Underline" FontFamily="Century Gothic" Cursor="Hand"/>
             </Grid>
 
 
@@ -101,7 +101,7 @@
 
                 <Button Grid.Column="1" Padding="6" Width="100" Height="30"
                         FontSize="15"  FontFamily="Century Gothic" Background="#3F72AF"
-                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Top" FontWeight="Bold" >
+                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Top" >
 
                     <WrapPanel>
                         <TextBlock Foreground="White">Entrar</TextBlock>
