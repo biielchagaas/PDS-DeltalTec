@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Projeto_DentalTec
+namespace DentalTech
 {
     /// <summary>
     /// Interação lógica para App.xaml

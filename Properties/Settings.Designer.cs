@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Projeto_DentalTec.Properties
+namespace DentalTech.Properties
 {
 
 
