@@ -19,7 +19,7 @@
 
             <TextBlock Text="Relátorio de Funcionário" FontSize="40"  Foreground="#112D4E" FontFamily="Century Gothic"  Margin="10 15 0 0"/>
             <Grid HorizontalAlignment="Left">
-                <RadioButton Content="Nome" Foreground="#112D4E" Margin="450 20 80 0" FontSize="25"/>
+                <RadioButton Content="Nome" Foreground="#112D4E" Margin="450 21 80 0" FontSize="25"/>
             </Grid>
             <Grid HorizontalAlignment="Left">
                 <RadioButton Content="Cpf" Foreground="#112D4E" Margin="630 -30 95 0" FontSize="25" Grid.Column="1" Grid.ColumnSpan="2"/>
