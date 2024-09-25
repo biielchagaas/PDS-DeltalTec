@@ -159,28 +159,15 @@
                                 Teve febre nos últimos dias?                                 
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
+                                
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Margin="10 10">
@@ -192,28 +179,14 @@
                                     Faz tratamento médico atualmente?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="2" Margin="10 10">
@@ -225,28 +198,14 @@
                                     Já teve problemas com cicatrização?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="3" Margin="10 10">
@@ -258,28 +217,14 @@
                                     Já teve problemas com anestesia?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                         </Grid>
@@ -301,28 +246,14 @@
                                     Faz ou já fez uso de drogas?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Margin="10 10">
@@ -334,28 +265,14 @@
                                     Tem diabetes?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="2" Margin="10 10">
@@ -367,28 +284,14 @@
                                     Tem doenças articulares ou reumáticas?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="3" Margin="10 10">
@@ -400,33 +303,17 @@
                                     Tem hipertensão?
                                 </Label>
 
-                                <Grid Margin="0 20 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <StackPanel Grid.Column="0" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Sim"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-
-                                    <StackPanel Grid.Column="1" Margin="10 10">
-                                        <RadioButton
-                                      FontWeight="Bold" FontSize="20"
-                                      FontFamily="Century Gothic" Foreground="#112D4E"
-                                      Content="Não"
-                                      Style="{StaticResource MaterialDesignRadioButton}" />
-                                    </StackPanel>
-                                </Grid>
+                                <ListBox
+                                  Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
+                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                    <ListBoxItem
+                                    Content="Sim" Width="100"/>
+                                    <ListBoxItem
+                                    Content="Não" Width="100"/>
+                                </ListBox>
                             </StackPanel>
 
                         </Grid>
-
-
 
                     </Grid>
 

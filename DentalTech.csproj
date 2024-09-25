@@ -75,8 +75,11 @@
     <Compile Include="View\CadastrarServico.xaml.cs">
       <DependentUpon>CadastrarServico.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RelatorioCaixa.xaml.cs">
-      <DependentUpon>RelatorioCaixa.xaml</DependentUpon>
+    <Compile Include="View\RealizarVenda.xaml.cs">
+      <DependentUpon>RealizarVenda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ReceberVenda.xaml.cs">
+      <DependentUpon>ReceberVenda.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RelatorioConsulta.xaml.cs">
       <DependentUpon>RelatorioConsulta.xaml</DependentUpon>
@@ -155,7 +158,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RelatorioCaixa.xaml">
+    <Page Include="View\RealizarVenda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ReceberVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,10 +243,11 @@
     <Resource Include="Resource\BotaoSalvar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\icons8-relatorio.png" />
+    <Resource Include="Resource\BotaoBuscar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resource\lupa.png" />
+    <Resource Include="Resource\BotaoEmitir.png" />
+    <Resource Include="Resource\BotaoReceber.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
