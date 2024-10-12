@@ -75,6 +75,30 @@
     <Compile Include="View\CadastrarServico.xaml.cs">
       <DependentUpon>CadastrarServico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConsultarAnamnese.xaml.cs">
+      <DependentUpon>ConsultarAnamnese.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarConsulta.xaml.cs">
+      <DependentUpon>ConsultarConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarDespesa.xaml.cs">
+      <DependentUpon>ConsultarDespesa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarFuncionario.xaml.cs">
+      <DependentUpon>ConsultarFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarOrcamento.xaml.cs">
+      <DependentUpon>ConsultarOrcamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarPaciente.xaml.cs">
+      <DependentUpon>ConsultarPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarProduto.xaml.cs">
+      <DependentUpon>ConsultarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarServico.xaml.cs">
+      <DependentUpon>ConsultarServico.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -146,6 +170,38 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\CadastrarServico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarAnamnese.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarDespesa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarOrcamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarServico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
