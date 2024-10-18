@@ -84,9 +84,6 @@
     <Compile Include="View\ConsultarDespesa.xaml.cs">
       <DependentUpon>ConsultarDespesa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\ConsultarFuncionario.xaml.cs">
-      <DependentUpon>ConsultarFuncionario.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\ConsultarOrcamento.xaml.cs">
       <DependentUpon>ConsultarOrcamento.xaml</DependentUpon>
     </Compile>
@@ -113,6 +110,9 @@
     </Compile>
     <Compile Include="View\RecuperarSenha2.xaml.cs">
       <DependentUpon>RecuperarSenha2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RecuperarSenha3.xaml.cs">
+      <DependentUpon>RecuperarSenha3.xaml</DependentUpon>
     </Compile>
     <Page Include="View\CadastrarAgendamento.xaml">
       <SubType>Designer</SubType>
@@ -185,10 +185,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\ConsultarFuncionario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\ConsultarOrcamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,6 +218,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RecuperarSenha2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RecuperarSenha3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -283,6 +283,15 @@
   <ItemGroup>
     <Resource Include="Resource\BotaoEmitir.png" />
     <Resource Include="Resource\BotaoReceber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\IconRelatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\IconExcluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\BotaoEditar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
