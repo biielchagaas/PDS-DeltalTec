@@ -84,6 +84,9 @@
     <Compile Include="View\ConsultarDespesa.xaml.cs">
       <DependentUpon>ConsultarDespesa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConsultarFuncionario.xaml.cs">
+      <DependentUpon>ConsultarFuncionario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ConsultarOrcamento.xaml.cs">
       <DependentUpon>ConsultarOrcamento.xaml</DependentUpon>
     </Compile>
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ConsultarDespesa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
