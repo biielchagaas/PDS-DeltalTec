@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Projeto_DentalTec
+namespace DentalTech.View
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para ConsultarPaciente.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ConsultarPaciente : Window
     {
-        public MainWindow()
+        public ConsultarPaciente()
         {
             InitializeComponent();
         }

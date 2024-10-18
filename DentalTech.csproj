@@ -75,29 +75,44 @@
     <Compile Include="View\CadastrarServico.xaml.cs">
       <DependentUpon>CadastrarServico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ConsultarAnamnese.xaml.cs">
+      <DependentUpon>ConsultarAnamnese.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarConsulta.xaml.cs">
+      <DependentUpon>ConsultarConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarDespesa.xaml.cs">
+      <DependentUpon>ConsultarDespesa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarFuncionario.xaml.cs">
+      <DependentUpon>ConsultarFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarOrcamento.xaml.cs">
+      <DependentUpon>ConsultarOrcamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarPaciente.xaml.cs">
+      <DependentUpon>ConsultarPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarProduto.xaml.cs">
+      <DependentUpon>ConsultarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarServico.xaml.cs">
+      <DependentUpon>ConsultarServico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RealizarVenda.xaml.cs">
       <DependentUpon>RealizarVenda.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ReceberVenda.xaml.cs">
       <DependentUpon>ReceberVenda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RelatorioConsulta.xaml.cs">
-      <DependentUpon>RelatorioConsulta.xaml</DependentUpon>
+    <Compile Include="View\RecuperarSenha1.xaml.cs">
+      <DependentUpon>RecuperarSenha1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\RelatorioDespesa.xaml.cs">
-      <DependentUpon>RelatorioDespesa.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RelatorioFuncionario.xaml.cs">
-      <DependentUpon>RelatorioFuncionario.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RelatorioPaciente.xaml.cs">
-      <DependentUpon>RelatorioPaciente.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RelatorioProduto.xaml.cs">
-      <DependentUpon>RelatorioProduto.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\RelatorioVenda.xaml.cs">
-      <DependentUpon>RelatorioVenda.xaml</DependentUpon>
+    <Compile Include="View\RecuperarSenha2.xaml.cs">
+      <DependentUpon>RecuperarSenha2.xaml</DependentUpon>
     </Compile>
     <Page Include="View\CadastrarAgendamento.xaml">
       <SubType>Designer</SubType>
@@ -158,6 +173,42 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ConsultarAnamnese.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarDespesa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarOrcamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ConsultarServico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\RealizarVenda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,27 +217,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RelatorioConsulta.xaml">
+    <Page Include="View\RecuperarSenha1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\RelatorioDespesa.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RelatorioFuncionario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RelatorioPaciente.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RelatorioProduto.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\RelatorioVenda.xaml">
+    <Page Include="View\RecuperarSenha2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

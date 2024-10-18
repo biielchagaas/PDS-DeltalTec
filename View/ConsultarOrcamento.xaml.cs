@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Projeto_DentalTec.Telas
+namespace DentalTech.View
 {
     /// <summary>
-    /// Lógica interna para RelatorioConsulta.xaml
+    /// Lógica interna para ConsultarOrcamento.xaml
     /// </summary>
-    public partial class RelatorioConsulta : Window
+    public partial class ConsultarOrcamento : Window
     {
-        public RelatorioConsulta()
+        public ConsultarOrcamento()
         {
             InitializeComponent();
         }

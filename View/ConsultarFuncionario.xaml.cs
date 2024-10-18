@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Projeto_DentalTec.Telas
+namespace DentalTech.View
 {
     /// <summary>
-    /// Lógica interna para RecuperarSenha3.xaml
+    /// Lógica interna para ConsultarFuncionario.xaml
     /// </summary>
-    public partial class RecuperarSenha3 : Window
+    public partial class ConsultarFuncionario : Window
     {
-        public RecuperarSenha3()
+        public ConsultarFuncionario()
         {
             InitializeComponent();
         }
