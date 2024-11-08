@@ -23,5 +23,19 @@ namespace DentalTech.View
         {
             InitializeComponent();
         }
+
+        private void Voltar_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+            this.Close();
+        }
+
+        private void Senha2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            RecuperarSenha2 s2 = new RecuperarSenha2();
+            s2.Show();
+            this.Close();
+        }
     }
 }

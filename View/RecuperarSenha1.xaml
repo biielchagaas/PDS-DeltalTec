@@ -32,7 +32,7 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="0" Padding="6" Width="150" Height="40"
                         FontSize="15"  FontFamily="Century Gothic" Background="#81A0C5"
-                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Voltar_Button_Click">
                     <WrapPanel>
                         <TextBlock Foreground="White">Voltar</TextBlock>
                     </WrapPanel>
@@ -44,7 +44,7 @@
                 </Button>
                 <Button Grid.Column="1" Padding="6" Width="150" Height="40"
                         FontSize="15" Background="#3F72AF"
-                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Center" FontFamily="Century Gothic">
+                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Center" FontFamily="Century Gothic" Click="Senha2_Button_Click">
                     <WrapPanel>
                         <TextBlock Foreground="White">Enviar</TextBlock>
                     </WrapPanel>
