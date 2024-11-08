@@ -1,0 +1,72 @@
+﻿<Window x:Class="DentalTech.View.ControlarCaixa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DentalTech.View"
+        mc:Ignorable="d"    
+        Title="ControlarCaixa" Height="800" Width="1500">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#3F72AF" Grid.ColumnSpan="3"/>
+        <Border Grid.Column="2" Background="#F9F7F7"/>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Image Source="../Resource/LogoDental.png" Width="150"/>
+        </WrapPanel>
+        <StackPanel Grid.Column="0" Margin="20,180,30,0" VerticalAlignment="Top">
+            <TreeView MinWidth="220">
+                <TreeViewItem Header="Funcionário" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar Funcionário" FontWeight="Light" Foreground="#F9F7F7" Cursor="Hand"/>
+                    <TreeViewItem Header="Consultar Funcionário" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Financeiro" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Controlar Caixa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório do caixa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Realizar venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Receber venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório de venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Cadastrar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Agenda" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Pacientes" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Cadastrar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Consultas" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar consulta" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar consulta" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Produtos" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar produto" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar produto" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Serviços" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar serviço" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar serviço" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+                <TreeViewItem Header= "Orçamento" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
+                    <TreeViewItem Header="Cadastrar orçamento" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar orçamento" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                </TreeViewItem>
+            </TreeView>
+        </StackPanel>
+
+    </Grid>
+</Window>

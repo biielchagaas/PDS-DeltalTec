@@ -27,56 +27,251 @@
             <TreeView MinWidth="220">
 
                 <TreeViewItem Header="Funcionário" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar Funcionário" FontWeight="Light" Foreground="#F9F7F7" MouseDown="AcessoCadastrarFuncionario_Click" Cursor="Hand"/>
-                    <TreeViewItem Header="Consultar Funcionário" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar funcionário" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius="5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar funcionário" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius="5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Financeiro" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Controlar Caixa" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório do caixa" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Realizar venda" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Receber venda" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório de venda" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Cadastrar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Controlar Caixa" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório do caixa" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Realizar venda" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Receber venda" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório de venda" Margin="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar despesa" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar despesa" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório despesa" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Agenda" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>             
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar agendamento" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar agendamento" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Pacientes" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Cadastrar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar paciente" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar paciente" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar anamnese" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar anamnese" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Consultas" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar consulta" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar consulta" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>                    
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar consulta" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar consulta" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Produtos" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar produto" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar produto" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar produto" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar produto" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Serviços" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar serviço" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar serviço" FontWeight="Light" Foreground="#F9F7F7"/>                    
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar serviço" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar serviço" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Orçamento" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
-                    <TreeViewItem Header="Cadastrar orçamento" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Consultar orçamento" FontWeight="Light" Foreground="#F9F7F7"/>
-                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Cadastrar orçamento" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Consultar orçamento" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+
+                    <Button
+    FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
+    Content="Emitir relatório" Padding="0" FontSize="15"
+    materialDesign:ButtonAssist.CornerRadius= "5"
+    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </TreeViewItem>
 
             </TreeView>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace DentalTech.View
 {
     /// <summary>
-    /// Lógica interna para RelatorioConsulta.xaml
+    /// Lógica interna para ControlarCaixa.xaml
     /// </summary>
-    public partial class RelatorioConsulta : Window
+    public partial class ControlarCaixa : Window
     {
-        public RelatorioConsulta()
+        public ControlarCaixa()
         {
             InitializeComponent();
         }
