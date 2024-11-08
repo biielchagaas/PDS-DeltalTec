@@ -102,7 +102,7 @@
                             Foreground="#112D4E"
                             materialDesign:HintAssist.Hint="Digite aqui"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
-                        <Button Content="Buscar" Click="Button_Click" Margin="10" Height="55" Width="120" Background="#FF3F72AF"/>
+                        <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF"/>
                     </StackPanel>
                 </Grid>
             
