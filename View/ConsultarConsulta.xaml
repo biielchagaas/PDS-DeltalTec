@@ -293,9 +293,28 @@
                             Foreground="#112D4E"
                             materialDesign:HintAssist.Hint="Digite aqui"
                             Style="{StaticResource MaterialDesignOutlinedTextBox}"/>
+<<<<<<< Updated upstream
                             <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF"/>
                         </StackPanel>
                     </Grid>
+=======
+                        <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF"/>
+                    </StackPanel>
+                </Grid>
+        
+                <Grid>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 0 10">
+                        <RadioButton GroupName="CampoBusca" Content="Nome" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0"/>
+                        <RadioButton GroupName="CampoBusca" Content="Profissional" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0"/>
+                        <RadioButton GroupName="CampoBusca" Content="Todos" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0"/>
+                        <RadioButton GroupName="CampoBusca" Content="Horário" FontSize="20" FontFamily="Century Gothic" />
+                    </StackPanel>
+                </Grid>
+            
+                <Grid>
+                    <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="450"/>
+                </Grid>
+>>>>>>> Stashed changes
 
                     <Grid>
                         <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 0 10">
