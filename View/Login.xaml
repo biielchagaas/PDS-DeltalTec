@@ -80,7 +80,7 @@
                 </Grid.ColumnDefinitions>
                 <Button Grid.Column="1" Padding="6" Width="100" Height="30"
                         FontSize="15"  FontFamily="Century Gothic" Background="#3F72AF"
-                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Top">
+                        BorderBrush="Transparent" Margin="10 5" Cursor="Hand" VerticalAlignment="Top" Click="IrParaCadCliente">
                     <WrapPanel>
                         <TextBlock Foreground="White">Entrar</TextBlock>
                     </WrapPanel>

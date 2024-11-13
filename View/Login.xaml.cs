@@ -22,5 +22,12 @@ namespace DentalTech.View
         {
             InitializeComponent();
         }
+
+        private void IrParaCadCliente(object sender, RoutedEventArgs e)
+        {
+            CadastrarPaciente cadastrarPaciente = new CadastrarPaciente();
+            cadastrarPaciente.Show();
+            this.Close();
+        }
     }
 }
