@@ -23,12 +23,6 @@ namespace DentalTech.View
         {
             InitializeComponent();
         }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
         private void MainTreeView6_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             // Obtém o item selecionado no TreeView

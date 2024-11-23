@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DentalTech.View"
         mc:Ignorable="d"
-        Title="RelatorioOrcamento" Height="880" Width="1500"
-        WindowState="Maximized" WindowStartupLocation="CenterScreen">
+           Title="RelatorioOrcamento" Height="880" Width="1500"
+    WindowState="Maximized" WindowStartupLocation="CenterScreen">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -133,7 +133,7 @@
                     </Style>
                 </DatePicker.Resources>
             </DatePicker>
-            
+
             <DataGrid FontSize="16" FontFamily="Century Gothic" Margin=" 30 50 60 0"  Width="950" Height="320" Background="#DBE2EF" SelectionChanged="DataGrid_SelectionChanged"></DataGrid>
             <Button Padding="6" Margin="-800 30 0 0" Height="50" Width="150"  Background="#112D4E" BorderBrush="#000">
                 <WrapPanel>
