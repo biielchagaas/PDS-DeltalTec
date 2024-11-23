@@ -9,7 +9,7 @@
     WindowState="Maximized" WindowStartupLocation="CenterScreen">
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Background="#3F72AF" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
