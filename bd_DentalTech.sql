@@ -19,6 +19,10 @@ rua_pac varchar(300) not null,
 numero_pac int not null
 );
 
+INSERT INTO Paciente VALUES (null, '12345678901', 'Ativo', 1234567, 'SSP-SP', 'Solteiro', 'Masculino', 'joao.silva@gmail.com', 11987654321, '1990-05-15', 12345000, 'São Paulo', 'Centro', 'Rua A', 10);
+INSERT INTO Paciente VALUES (null, '98765432101', 'Ativo', 7654321, 'SSP-RJ', 'Casado', 'Feminino', 'maria.oliveira@gmail.com', 21965432109, '1985-10-22', 22041010, 'Rio de Janeiro', 'Copacabana', 'Avenida B', 200);
+INSERT INTO Paciente VALUES (null, '11122233344', 'Ativo', 5555555, 'SSP-MG', 'Viúvo', 'Masculino', 'carlos.mendes@gmail.com', 31999998888, '1970-03-30', 30130010, 'Belo Horizonte', 'Savassi', 'Rua C', 33);
+
 create table Funcionario(
 id_func int primary key auto_increment not null,
 cpf_func varchar(15) not null,
@@ -41,6 +45,9 @@ ctps_func varchar(15) not null,
 cnh_func varchar(15) not null,
 senha_func varchar(50) not null
 );
+INSERT into Funcionario values (null, '12345678901', 'Ativo', 1234567, 'SSP-SP', 'Solteiro', 'Masculino', 'Dentista', 'eduardo.pereira@gmail.com', 11987654321, '1980-02-15', 12345000, 'São Paulo', 'Centro', 'Rua A', 10, '2010-05-20', '12345678901', '9876543210', 'senha123');
+INSERT into Funcionario values (null, '98765432101', 'Ativo', 7654321, 'SSP-RJ', 'Casado', 'Feminino', 'Ortodontista', 'carolina.lima@gmail.com', 21965432109, '1985-07-22', 22041010, 'Rio de Janeiro', 'Copacabana', 'Avenida B', 200, '2015-10-12', '98765432101', '1234567890', 'senha456');
+INSERT into Funcionario values (null, '11122233344', 'Inativo', 5555555, 'SSP-MG', 'Viúvo', 'Masculino', 'Recepcionista', 'roberto.mendes@gmail.com', 31999998888, '1970-01-30', 30130010, 'Belo Horizonte', 'Savassi', 'Rua C', 33, '2000-03-10', '11122233344', '0001112223', 'senha789');
 
 create table Agendamento(
 id_age int primary key auto_increment not null,
@@ -51,6 +58,10 @@ id_func_fk int,
 foreign key(id_pac_fk)references Paciente(id_pac),
 foreign key(id_func_fk)references Funcionario(id_func)
 );
+
+insert into Agendamento values (null, '2023-12-01', '09:00:00', 1, 1);
+insert into Agendamento values (null, '2023-12-02', '10:30:00', 2, 2);
+insert into Agendamento values (null, '2023-12-03', '14:00:00', 3, 1);
 
 create table Anamnese(
 id_anam int primary key auto_increment not null,
@@ -69,6 +80,10 @@ foreign key(id_pac_fk)references Paciente (id_pac),
 foreign key(id_func_fk)references Funcionario (id_func)
 );
 
+insert into Anamnese values (null, '2023-10-01', TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, 1, 1);
+insert into Anamnese values (null, '2023-10-10', FALSE, TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, TRUE, 2, 2);
+insert into Anamnese values (null, '2023-10-15', TRUE, TRUE, TRUE, FALSE, TRUE, FALSE, TRUE, TRUE, 3, 1);
+
 create table Consulta(
 id_cons int primary key auto_increment not null,
 data_cons date not null,
@@ -83,6 +98,10 @@ foreign key(id_func_fk)references Funcionario (id_func),
 foreign key(id_anam_fk)references Anamnese (id_anam)
 );
 
+insert into Consulta values (null, '2024-11-01', '10:30:00', 200.00, 'Consulta de rotina para avaliação geral.', 1, 2, 1);
+insert into Consulta values (null, '2024-11-02', '14:00:00', 300.00, 'Consulta odontológica para tratamento de cáries.', 2, 3, 2);
+insert into Consulta values (null, '2024-11-03', '09:00:00', 250.00, 'Revisão ortodôntica e ajustes de aparelho.', 3, 1, 3);
+
 create table Orcamento(
 id_orca int primary key auto_increment not null,
 id_pac_fk int,
@@ -90,6 +109,9 @@ id_func_fk int,
 foreign key(id_pac_fk)references Paciente (id_pac),
 foreign key(id_func_fk)references Funcionario (id_func)
 );
+insert into Orcamento values (null, 1, 1);
+insert into Orcamento values (null, 2, 2);
+insert into Orcamento values (null, 3, 1);
 
 create table Fornecedor(
 id_forn int primary key auto_increment not null,
@@ -99,6 +121,10 @@ representante_forn varchar (100),
 telefone_forn varchar (100)
 );
 
+insert into Fornecedor values (null, 'Fornecedor A Ltda', 'Fantasia A', 'João Silva', '11999999999');
+insert into Fornecedor values (null, 'Fornecedor B Ltda', 'Fantasia B', 'Maria Oliveira', '21988888888');
+insert into Fornecedor values (null, 'Fornecedor C Ltda', 'Fantasia C', 'Carlos Mendes', '31977777777');
+
 create table Produto(
 id_prod int primary key auto_increment not null,
 nome_prod varchar(300) not null,
@@ -107,6 +133,11 @@ dataValidade_prod date not null,
 codigoBarras_prod int not null,
 valor_prod float not null
 );
+
+insert into Produto values (null, 'Bisturi', '2023-01-15', '2025-01-15', '1234567890', 49.90);
+insert into Produto values (null, 'Pinça clínica', '2023-06-10', '2024-06-10', '007654319', 29.99);
+insert into Produto values (null,'Espelho clínico', '2022-12-05', '2023-12-05', '0178901234', 99.50);
+
 
 create table Compra_Produto (
 id_comp int not null primary key auto_increment,
@@ -119,6 +150,10 @@ foreign key (id_func_fk) references Funcionario (id_func),
 foreign key (id_forn_fk) references Fornecedor (id_forn)
 );
 
+insert into Compra_Produto values (null, '2023-12-01', 500.00, 'Cartão de Crédito', 1, 2);
+insert into Compra_Produto values (null, '2023-12-05', 200.00, 'Dinheiro', 2, 3);
+insert into Compra_Produto values (null, '2023-12-10', 290.00, 'Dinheiro', 3, 1);
+
 create table Itens_Compra (
 id_itc int not null primary key auto_increment,
 quant_itc int not null,
@@ -128,6 +163,10 @@ id_comp_fk int not null,
 foreign key (id_prod_fk) references Produto (id_prod),
 foreign key (id_comp_fk) references Compra_Produto (id_comp)
 );
+
+insert into Itens_Compra values (null, 10, 50.00, 1, 2);
+insert into Itens_Compra values (null, 5, 20.00, 2, 3);
+insert into Itens_Compra values (null, 3, 30.00, 3, 2);
 
 create table Caixa (
 id_cai int not null primary key auto_increment,
