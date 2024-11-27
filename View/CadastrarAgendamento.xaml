@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <!-- oiii -->
+        <!-- oi -->
 
         <Border Grid.Column="0" Background="#3F72AF" Grid.ColumnSpan="3"/>
         <Border Grid.Column="2" Background="#F9F7F7"/>
