@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DentalTech.Models
 {
-    internal class CadastrarCliente
+    internal class CadastrarFuncionario
     {
         public int Id { get; set; }
         public string Cpf { get; set; }
@@ -16,6 +16,7 @@ namespace DentalTech.Models
 
         public string EstadoCivil { get; set; }
         public string Genero { get; set; }
+        public string Cargo { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
 
@@ -26,6 +27,11 @@ namespace DentalTech.Models
         public string Bairro { get; set; }
         public string Rua { get; set; }
 
-        public int Numero { get; set;}
+        public int Numero { get; set; }
+
+        public DateTime DataAdmissao { get; set; }
+        public string Ctps { get; set; }
+        public string Cnh { get; set; }
+        public string Senha { get; set; }
     }
 }

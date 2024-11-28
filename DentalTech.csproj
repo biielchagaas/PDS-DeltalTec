@@ -119,7 +119,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Models\CadastrarAgendamento.cs" />
+    <Compile Include="Models\CadastrarAnamnese.cs" />
+    <Compile Include="Models\CadastrarCaixa.cs" />
     <Compile Include="Models\CadastrarCliente.cs" />
+    <Compile Include="Models\CadastrarCompraProduto.cs" />
+    <Compile Include="Models\CadastrarConsulta.cs" />
+    <Compile Include="Models\CadastrarDespesa.cs" />
+    <Compile Include="Models\CadastrarFornecedor.cs" />
+    <Compile Include="Models\CadastrarFuncionario.cs" />
+    <Compile Include="Models\CadastrarItensCompra.cs" />
+    <Compile Include="Models\CadastrarOrcamento.cs" />
+    <Compile Include="Models\CadastrarPagamento.cs" />
+    <Compile Include="Models\CadastrarRecebimento.cs" />
+    <Compile Include="Models\CadastrarServico.cs" />
+    <Compile Include="Models\CadastrarServicoVenda.cs" />
+    <Compile Include="Models\CadastrarVenda.cs" />
     <Compile Include="View\CadastrarOrcamento.xaml.cs">
       <DependentUpon>CadastrarOrcamento.xaml</DependentUpon>
     </Compile>
@@ -179,6 +194,9 @@
     </Compile>
     <Compile Include="View\RelatorioFuncionario.xaml.cs">
       <DependentUpon>RelatorioFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RelatorioOrcamento.xaml.cs">
+      <DependentUpon>RelatorioOrcamento.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RelatorioPaciente.xaml.cs">
       <DependentUpon>RelatorioPaciente.xaml</DependentUpon>
@@ -310,6 +328,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RelatorioFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RelatorioOrcamento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
