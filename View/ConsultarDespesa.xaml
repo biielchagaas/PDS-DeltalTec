@@ -78,9 +78,62 @@
                         <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 10 10">
                             <TextBox x:Name="txtBusca" Height="55" Width="400" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Digite aqui" Style="{StaticResource MaterialDesignOutlinedTextBox}" />
                             <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
+                        
+                        
                         </StackPanel>
                     </Grid>
+                    
                     <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
+
+                    <Grid>
+                        <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="400"/>
+                    </Grid>
+                    <Grid Margin="80 10 80 10" VerticalAlignment="Center" Width="400">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button
+                        Grid.Column="0" Height="50" Background="#F9F7F7"
+                        BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
+                        materialDesign:ButtonAssist.CornerRadius="10"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            <WrapPanel VerticalAlignment="Center">
+                                <Image Source="../Resource/IconExcluir.png" Width= "26"/>
+                                <Label Content="Excluir" FontSize="15" FontFamily="Century Gothic"
+                            Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </WrapPanel>
+                        </Button>
+                        <Button
+                        Grid.Column="1" Height="50" Background="#F9F7F7"
+                        BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
+                        materialDesign:ButtonAssist.CornerRadius="10"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                        ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            <WrapPanel VerticalAlignment="Center">
+                                <Image Source="../Resource/BotaoEditar.png" Width= "30"/>
+                                <Label Content="Editar" FontSize="15" FontFamily="Century Gothic"
+                            Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </WrapPanel>
+                        </Button>
+                        <Button
+                    Grid.Column="2" Height="50" Background="#F9F7F7"
+                    BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
+                    materialDesign:ButtonAssist.CornerRadius="10"
+                    IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                    Style="{StaticResource MaterialDesignRaisedButton}"
+                    ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            <WrapPanel VerticalAlignment="Center">
+                                <Image Source="../Resource/BotaoNovo.png" Width= "30"/>
+                                <Label Content="Novo" FontSize="15" FontFamily="Century Gothic"
+                        Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold"/>
+                            </WrapPanel>
+                        </Button>
+                    </Grid>
                 </StackPanel>
             </Grid>
             <Grid>

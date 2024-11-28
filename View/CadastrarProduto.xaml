@@ -50,6 +50,9 @@
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+                    <TreeViewItem Header="Cadastrar Funcionário" FontWeight="Light" Foreground="#F9F7F7" />
+                    <TreeViewItem Header="Consultar Funcionário" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Financeiro" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
@@ -116,6 +119,15 @@
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+                    <TreeViewItem Header="Controlar Caixa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório do caixa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Realizar venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Receber venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório de venda" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Cadastrar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório despesa" FontWeight="Light" Foreground="#F9F7F7"/>
+                
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Agenda" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
@@ -134,6 +146,8 @@
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+                    <TreeViewItem Header="Cadastrar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar agendamento" FontWeight="Light" Foreground="#F9F7F7"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Pacientes" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
@@ -176,6 +190,11 @@
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+                    <TreeViewItem Header="Cadastrar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar paciente" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Cadastrar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Consultar anamnese" FontWeight="Light" Foreground="#F9F7F7"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Consultas" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">

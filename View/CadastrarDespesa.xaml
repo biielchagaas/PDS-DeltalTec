@@ -50,6 +50,9 @@
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
     Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
+                    <TreeViewItem Header="Cadastrar Funcionário" FontWeight="Light" Foreground="#F9F7F7" />
+                    <TreeViewItem Header="Consultar Funcionário" FontWeight="Light" Foreground="#F9F7F7"/>
+                    <TreeViewItem Header="Emitir relatório" FontWeight="Light" Foreground="#F9F7F7"/>
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Financeiro" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
