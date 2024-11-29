@@ -13,10 +13,10 @@ namespace DentalTech.Database
     {
 
         private static string host = "localhost";
-        private static string port = "3360";
+        private static string port = "3306";
         private static string user = "root";
         private static string password = "root";
-        private static string dbname = "oi";
+        private static string dbname = "bd_DentalTech";
         private static MySqlConnection connection;
         private static MySqlCommand command;
 
@@ -34,12 +34,13 @@ namespace DentalTech.Database
 
         }
 
-        public MySqlCommand Query()
+        public MySqlCommand Query(string comando)
         {
             try
             {
                 command = connection.CreateCommand();
                 command.CommandType = CommandType.Text;
+                command.CommandText = comando;
 
                 return command;
             }

@@ -89,21 +89,21 @@
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Nome" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="nome" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Nome" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                             
                             
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="CPF" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="cpf" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="CPF" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="2" Margin="10 10">
-                            <ComboBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Status" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
+                            <ComboBox x:Name="status" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Status" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
                                 <ComboBoxItem Content="Ativo" />
                                 <ComboBoxItem Content="Inativo" />
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Grid.Column="3" Margin="10 10">
-                            <ComboBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Estado Civil" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
+                            <ComboBox x:Name="estadoCiv" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Estado Civil" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
                                 <ComboBoxItem Content="Solteiro(a)" />
                                 <ComboBoxItem Content="Casado(a)" />
                                 <ComboBoxItem Content="Divorciado(a)" />
@@ -119,16 +119,16 @@
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="RG" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="rg" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="RG" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Expedidor" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="expedidor" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Expedidor" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="2" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Telefone" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="telefone" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Telefone" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="3" Margin="10 10">
-                            <ComboBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Gênero" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
+                            <ComboBox x:Name="genero" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Gênero" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
                                 <ComboBoxItem Content="Masculino" />
                                 <ComboBoxItem Content="Feminino" />
                                 <ComboBoxItem Content="Rock" />
@@ -143,16 +143,16 @@
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="email" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <DatePicker FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Data de nascimento" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="58" />
+                            <DatePicker x:Name="dataNasc" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Data de nascimento" Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="58" />
                         </StackPanel>
                         <StackPanel Grid.Column="2" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="CEP" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="cep" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="CEP" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="3" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Estado" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="estado" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Estado" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                     </Grid>
                     <Grid>
@@ -163,16 +163,16 @@
                             <ColumnDefinition Width="0.5*" />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Cidade" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="cidade" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Cidade" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Bairro" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="bairro" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Bairro" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="2" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Rua" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="rua" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Rua" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                         <StackPanel Grid.Column="3" Margin="10 10">
-                            <TextBox FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Número" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
+                            <TextBox x:Name="numero" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Número" Style="{StaticResource MaterialDesignOutlinedTextBox}"></TextBox>
                         </StackPanel>
                     </Grid>
                     <Grid Margin="80 250 80 10" VerticalAlignment="Center" Width="700">
@@ -182,7 +182,7 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
+                        <Button Grid.Column="0" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners" Click="Salvar">
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoSalvar.png" Width="30" />
                                 <Label Content="Salvar" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />

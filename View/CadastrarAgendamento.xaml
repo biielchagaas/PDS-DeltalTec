@@ -307,12 +307,12 @@
                             <StackPanel Grid.Row="0" Margin="10 10">
 
                                 <TextBox
-                            Width="500" HorizontalAlignment="Left"
-                            FontWeight="Bold"
-                            FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                            
-                            materialDesign:HintAssist.Hint="Paciente"
-                            Style="{StaticResource MaterialDesignOutlinedTextBox}">
+                                    Width="500" HorizontalAlignment="Left"
+                                    FontWeight="Bold"
+                                    FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
+                                    x:Name="paciente"
+                                    materialDesign:HintAssist.Hint="Paciente"
+                                    Style="{StaticResource MaterialDesignOutlinedTextBox}">
                                 </TextBox>
 
                             </StackPanel>
@@ -321,8 +321,8 @@
                                 <TextBox
                                 Width="500" HorizontalAlignment="Left"
                                 FontWeight="Bold" FontSize="20"
-                                FontFamily="Century Gothic" Foreground="#112D4E"
-                            
+                                FontFamily="Century Gothic" Foreground="#112D4E" 
+                                x:Name="funcionario" 
                                 materialDesign:HintAssist.Hint="Profissional"
                                 Style="{StaticResource MaterialDesignOutlinedTextBox}">
                                 </TextBox>
@@ -334,6 +334,7 @@
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data"
+                              x:Name="data"
                               Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="58" />
                             </StackPanel>
 
@@ -341,9 +342,7 @@
                                 <materialDesign:TimePicker
                              Width="500" HorizontalAlignment="Left"
                             FontWeight="Bold"
-                            FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                              
-                            materialDesign:HintAssist.Hint="Horário"
+                            FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" x:Name="hora" materialDesign:HintAssist.Hint="Horário"
                             Is24Hours="True"
                             Style="{StaticResource MaterialDesignOutlinedTimePicker}" Height="58" />
                             </StackPanel>
@@ -371,7 +370,8 @@
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                             Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            ToolTip="MaterialDesignRaisedButton with Round Corners" Click="Salvar"
+                            x:Name="btnSalvar">
 
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoSalvar.png" Width= "30"/>

@@ -11,6 +11,9 @@ namespace DentalTech.Models
         public int Id { get; set; }
         public DateTime Data { get; set; }
         public TimeSpan Hora { get; set; }
+        public string NomePaciente { get; set; }
+        public string NomeFuncionario { get; set; }
+
 
 
         /*adicionar chave estrangeira?*/

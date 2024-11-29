@@ -3,21 +3,24 @@ use bd_DentalTech;
 
 create table Paciente(
 id_pac int primary key auto_increment not null,
-cpf_pac varchar(15) not null,
-status_pac varchar(15) not null,
-rg_pac int not null,
-expedidor_pac varchar(100) not null,
-estadoCivil_pac varchar(100) not null,
-genero_pac varchar(100) not null,
-email_pac varchar(300) not null,
-telefone_pac float not null,
-dataDeNascimento_pac date not null,
-cep_pac float not null,
-cidade_pac varchar(300) not null,
-bairro_pac varchar(300) not null,
-rua_pac varchar(300) not null,
-numero_pac int not null
+nome_pac varchar(300),
+cpf_pac varchar(15),
+status_pac varchar(15),
+rg_pac varchar(15),
+expedidor_pac varchar(100),
+estadoCivil_pac varchar(100),
+genero_pac varchar(100),
+email_pac varchar(300),
+telefone_pac varchar(100),
+dataDeNascimento_pac date,
+cep_pac varchar(15),
+cidade_pac varchar(300),
+bairro_pac varchar(300),
+rua_pac varchar(300),
+numero_pac varchar(15)
 );
+
+select * from Paciente;
 
 create table Funcionario(
 id_func int primary key auto_increment not null,
