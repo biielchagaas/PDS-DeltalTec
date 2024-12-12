@@ -20,29 +20,27 @@ rua_pac varchar(300),
 numero_pac varchar(15)
 );
 
-select * from Paciente;
-
 create table Funcionario(
-id_func int primary key auto_increment not null,
-cpf_func varchar(15) not null,
-status_func varchar(15) not null,
-rg_func int not null,
-expedidor_func varchar(100) not null,
-estadoCivil_func varchar(100) not null,
-genero_func varchar(100) not null,
-cargo_func varchar(100) not null,
-email_func varchar(300) not null,
-telefone_func float not null,
-dataDeNascimento_func date not null,
-cep_func float not null,
-cidade_func varchar(300) not null,
-bairro_func varchar(300) not null,
-rua_func varchar(300) not null,
-numero_func int not null,
-dataDeAdmissao_func date not null,
-ctps_func varchar(15) not null,
-cnh_func varchar(15) not null,
-senha_func varchar(50) not null
+id_func int primary key auto_increment,
+nome_func varchar(300),
+cpf_func varchar(15),
+status_func varchar(15),
+rg_func int,
+expedidor_func varchar(100),
+estadoCivil_func varchar(100),
+genero_func varchar(100),
+cargo_func varchar(100),
+email_func varchar(300),
+telefone_func float,
+dataDeNascimento_func date,
+cep_func varchar(15),
+cidade_func varchar(300),
+bairro_func varchar(300),
+rua_func varchar(300),
+numero_func int,
+dataDeAdmissao_func date,
+ctps_func varchar(15),
+senha_func varchar(50)
 );
 
 create table Agendamento(
