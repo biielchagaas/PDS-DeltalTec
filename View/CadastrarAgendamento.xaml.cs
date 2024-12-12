@@ -83,10 +83,8 @@ namespace DentalTech.View
 
                 using (MySqlCommand command = conexao.Query(query))
                 {
-                    // Adiciona o parâmetro de forma segura
                     command.Parameters.AddWithValue("@Nome", profissional);
 
-                    // Executa o comando e obtém o resultado
                     object resultado = command.ExecuteScalar();
 
                     if (resultado != null)
@@ -115,7 +113,6 @@ namespace DentalTech.View
                     if (result > 0)
                     {
                         MessageBox.Show("Agendamento cadastrado com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Close();
                     }
                     else
                     {

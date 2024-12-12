@@ -20,10 +20,9 @@ rua_pac varchar(300),
 numero_pac varchar(15)
 );
 
-select * from Paciente;
-
 create table Funcionario(
 id_func int primary key auto_increment not null,
+nome_func varchar(300) not null,	
 cpf_func varchar(15) not null,
 status_func varchar(15) not null,
 rg_func int not null,
