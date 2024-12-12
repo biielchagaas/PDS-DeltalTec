@@ -62,17 +62,16 @@ namespace DentalTech
             string telefonee = telefone.Text;
             string sexo = genero.Text;
             string emailm = email.Text;
-            DateTime? dataSelecionada = dataNasc.SelectedDate;
             string cepp = cep.Text;
             string estadoo = estado.Text;
             string cidadee = cidade.Text;
             string bairroo = bairro.Text;
             string enderecoo = rua.Text;
             string numeroo = numero.Text;
+            DateTime? dataSelecionada = dataNasc.SelectedDate;
 
             DateTime datanasc = dataSelecionada.Value;
 
-            // Formatando a data para o formato brasileiro
             string dataFormatada = datanasc.ToString("yyyy/MM/dd");
 
             try
@@ -108,7 +107,6 @@ namespace DentalTech
                     if (result > 0)
                     {
                         MessageBox.Show("Paciente cadastrado com sucesso.", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
-                        Close();
                     }
                     else
                     {

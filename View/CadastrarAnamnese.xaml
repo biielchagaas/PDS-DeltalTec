@@ -300,33 +300,16 @@
                         </Grid.ColumnDefinitions>
                         
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <ComboBox
-                              FontWeight="Bold"
-                              FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                              materialDesign:HintAssist.Hint="Paciente"
-                              Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
-                                <ComboBoxItem
-                                Content="Samantha Novaes" />
-                                <ComboBoxItem
-                                Content="Lindsay Lohan" />
-                            </ComboBox>
+                            <ComboBox x:Name="Pacientes" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Paciente" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58" />
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <ComboBox
-                              FontWeight="Bold"
-                              FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                              materialDesign:HintAssist.Hint="Profissional"
-                              Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58">
-                                <ComboBoxItem
-                                Content="Samantha Novaes" />
-                                <ComboBoxItem
-                                Content="Lindsay Lohan" />                                
-                            </ComboBox>
+                            <ComboBox x:Name="Funcionarios" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Profissional" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58" />
                         </StackPanel>
 
                         <StackPanel Grid.Column="2" Margin="10 10">
                             <DatePicker
+                                x:Name="Data"
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data"
@@ -360,7 +343,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="febre" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -380,7 +363,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="tratamento" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -399,7 +382,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="cicatrizacao" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -418,7 +401,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="anestesia" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -447,7 +430,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="drogas" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -466,7 +449,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="diabetes" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -485,7 +468,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="doencas" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -504,7 +487,7 @@
 
                                 <ListBox
                                   Style="{StaticResource MaterialDesignChoiceChipPrimaryOutlineListBox}"
-                                  FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
+                                  x:Name="hipertensao" FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E">
                                     <ListBoxItem
                                     Content="Sim" Width="100"/>
                                     <ListBoxItem
@@ -534,7 +517,7 @@
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                             Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            ToolTip="MaterialDesignRaisedButton with Round Corners" Click="Salvar">
 
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoSalvar.png" Width= "30"/>
