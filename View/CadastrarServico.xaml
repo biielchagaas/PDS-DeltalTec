@@ -307,20 +307,14 @@
                                 <TextBox
                                 FontWeight="Bold" Width="500" HorizontalAlignment="Left"
                                 FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                            
+                                x:Name="servico"
                                 materialDesign:HintAssist.Hint="Serviço"
                                 Style="{StaticResource MaterialDesignOutlinedTextBox}">
                                 </TextBox>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Margin="10 10">
-                                <TextBox
-                                FontWeight="Bold" Width="500" HorizontalAlignment="Left"
-                                FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                            
-                                materialDesign:HintAssist.Hint="Profissional"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}">
-                                </TextBox>
+                                <ComboBox x:Name="Funcionarios" FontWeight="Bold" Width="500" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Profissional" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58" />
                             </StackPanel>                            
 
                             <StackPanel Grid.Row="3" Margin="10 10">
