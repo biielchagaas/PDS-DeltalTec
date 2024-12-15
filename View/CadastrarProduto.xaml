@@ -317,6 +317,7 @@
                         <StackPanel Grid.Column="0" Margin="10 10">
 
                             <TextBox
+                            x:Name="produtoo"
                             FontWeight="Bold"
                             FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                             
@@ -328,6 +329,7 @@
 
                         <StackPanel Grid.Column="1" Margin="10 10">
                             <DatePicker
+                              x:Name="fabricacaoo"
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data de fabricação"
@@ -336,6 +338,7 @@
 
                         <StackPanel Grid.Column="2" Margin="10 10">
                             <DatePicker
+                              x:Name="vencimentoo"
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data de vencimento"
@@ -353,6 +356,7 @@
 
                         <StackPanel Grid.Column="0" Margin="10 10">
                             <TextBox
+                            x:Name="codigoo"
                             FontWeight="Bold"
                             FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                             
@@ -363,6 +367,7 @@
 
                         <StackPanel Grid.Column="1" Margin="10 10">
                             <TextBox
+                                x:Name="valorr"
                                 materialDesign:TextFieldAssist.PrefixText="$"
                                 
                                 FontWeight="Bold"
@@ -394,7 +399,7 @@
                             BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            Style="{StaticResource MaterialDesignRaisedButton}" Click="Salvar"
                             ToolTip="MaterialDesignRaisedButton with Round Corners">
 
                             <WrapPanel VerticalAlignment="Center">
