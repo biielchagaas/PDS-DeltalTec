@@ -82,7 +82,7 @@ namespace DentalTech.View
 
                     if (resultado != null)
                     {
-                        idPaciente = Convert.ToInt32(resultado);
+                        orcamento = Convert.ToInt32(resultado);
                         Console.WriteLine("ID encontrado: " + orcamento);
                     }
                     else
@@ -135,4 +135,5 @@ namespace DentalTech.View
                 MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
         }
+    }
 }
