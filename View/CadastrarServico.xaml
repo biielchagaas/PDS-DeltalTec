@@ -314,12 +314,13 @@
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Margin="10 10">
-                                <ComboBox x:Name="Funcionarios" FontWeight="Bold" Width="500" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Profissional" Style="{StaticResource MaterialDesignOutlinedComboBox}" Height="58" />
+                                <ComboBox x:Name="profissionais" FontWeight="Bold" Width="500" HorizontalAlignment="Left" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Profissional" Style="{StaticResource MaterialDesignOutlinedComboBox}" />
                             </StackPanel>                            
 
                             <StackPanel Grid.Row="3" Margin="10 10">
 
                                 <TextBox
+                                    x:Name="descricao"
                                 Height="200" Width="500"
                                 VerticalAlignment="Top" HorizontalAlignment="Left"
                                 FontWeight="Bold" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
@@ -352,7 +353,7 @@
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                             Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            ToolTip="MaterialDesignRaisedButton with Round Corners" Click="Salvar">
 
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoSalvar.png" Width= "30"/>
