@@ -279,7 +279,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                             Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            ToolTip="MaterialDesignRaisedButton with Round Corners" Click="Button_Click">
 
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoNovo.png" Width= "30"/>

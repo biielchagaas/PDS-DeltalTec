@@ -203,15 +203,6 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                             <ColumnDefinition Width="1*" />
                         </Grid.ColumnDefinitions>
                     </Grid>
-                    <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
-                </StackPanel>
-            </Grid>
-            <Grid>
-                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 0 10">
-                    <RadioButton GroupName="CampoBusca" Content="ID" FontSize="20" FontFamily="Century Gothic" />
-                    <RadioButton GroupName="CampoBusca" Content="Nome" FontSize="20" FontFamily="Century Gothic" />
-                    <RadioButton GroupName="CampoBusca" Content="CPF" FontSize="20" FontFamily="Century Gothic" />
-                    <RadioButton GroupName="CampoBusca" Content="RG" FontSize="20" FontFamily="Century Gothic" />
                 </StackPanel>
             </Grid>
             <Grid>

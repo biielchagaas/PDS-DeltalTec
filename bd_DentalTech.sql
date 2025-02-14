@@ -147,8 +147,7 @@ id_serv int primary key auto_increment not null,
 nome_serv varchar(200) not null,
 descricao_serv varchar(500) not null,
 id_func_fk int,
-id_orca_fk int,
-foreign key(id_func_fk)references Funcionario(id_func)
+foreign key (id_func_fk) references Funcionario(id_func)
 );
 
 create table Venda (
