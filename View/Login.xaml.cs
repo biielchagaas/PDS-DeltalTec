@@ -29,5 +29,7 @@ namespace DentalTech.View
             cadastrarPaciente.Show();
             this.Close();
         }
+       
+
     }
 }
