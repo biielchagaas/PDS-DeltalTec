@@ -71,6 +71,7 @@
                 </Grid.ColumnDefinitions>
                 <CheckBox Content="Lembrar senha" Background="White" Foreground="White"
                           FontSize="10" Margin="30 10 0 0" Grid.Column="0" FontFamily="Century Gothic"/>
+                <Frame x:Name="MainFrame" Source="HomePage.xaml"></Frame>
                 <TextBlock Text="Esqueceu a senha?" Foreground="White"
                            Margin="0 9 0 0" Grid.Column="1" FontSize="10" TextDecorations="Underline" Cursor="Hand" FontFamily="Century Gothic"/>
             </Grid>
