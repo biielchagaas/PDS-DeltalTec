@@ -198,9 +198,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                             <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
                         </StackPanel>
                     </Grid>
-                   
-                    
-                   <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
+
 
                     <Grid>
                         <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="350"/>

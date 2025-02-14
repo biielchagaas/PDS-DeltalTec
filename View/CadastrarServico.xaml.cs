@@ -62,6 +62,7 @@ namespace DentalTech.View
 
         void Inserir()
         {
+            string funcionario = profissionais.Text;
             string servicoo = servico.Text;
             string desc = descricao.Text;
 
@@ -74,7 +75,7 @@ namespace DentalTech.View
 
                 using (MySqlCommand command = conexao.Query(query))
                 {
-                    command.Parameters.AddWithValue("@Nome", profissional);
+                    command.Parameters.AddWithValue("@Nome", funcionario);
 
                     object resultado = command.ExecuteScalar();
 
@@ -300,6 +301,13 @@ namespace DentalTech.View
                     this.Close();
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            profissionais.ClearValue(ComboBox.TextProperty);
+            servico.Clear();
+            descricao.Clear();
         }
     }
 }
