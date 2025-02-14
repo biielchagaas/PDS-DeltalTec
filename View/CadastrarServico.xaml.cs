@@ -67,32 +67,10 @@ namespace DentalTech.View
 
             try
             {
-
                 Conexao conexao = new Conexao();
-                int orcamento = -1;
-                string query = "SELECT id_orca FROM Orcamento WHERE nome_pac = @Nome";
-
-                using (MySqlCommand command = conexao.Query(query))
-                {
-                    // Adiciona o parâmetro de forma segura
-                    command.Parameters.AddWithValue("@Nome", orcamento);
-
-                    // Executa o comando e obtém o resultado
-                    object resultado = command.ExecuteScalar();
-
-                    if (resultado != null)
-                    {
-                        orcamento = Convert.ToInt32(resultado);
-                        Console.WriteLine("ID encontrado: " + orcamento);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Nenhum registro encontrado com esse nome.");
-                    }
-                }
 
                 int profissional = -1;
-                query = "SELECT id_func FROM Funcionario WHERE nome_func = @Nome";
+                string query = "SELECT id_func FROM Funcionario WHERE nome_func = @Nome";
 
                 using (MySqlCommand command = conexao.Query(query))
                 {
@@ -111,14 +89,13 @@ namespace DentalTech.View
                     }
                 }
 
-                query = "INSERT INTO Servico (nome_serv, descricao_serv, id_func_fk, id_orca_fk) VALUES (@servico, @descricao, @profissional, @orcamento)";
+                query = "INSERT INTO Servico (nome_serv, descricao_serv, id_func_fk) VALUES (@servico, @descricao, @profissional);";
 
                 using (MySqlCommand command = conexao.Query(query))
                 {
                     command.Parameters.AddWithValue("@servico", servicoo);
-                    command.Parameters.AddWithValue("@desc", desc);
+                    command.Parameters.AddWithValue("@descricao", desc);
                     command.Parameters.AddWithValue("@profissional", profissional);
-                    command.Parameters.AddWithValue("@profissional", orcamento);
                     var result = command.ExecuteNonQuery();
                     if (result > 0)
                     {

@@ -26,6 +26,7 @@ namespace DentalTech.View
         public CadastrarAgendamento()
         {
             InitializeComponent();
+            PreencherComboBox();
         }
 
         private void Salvar(object sender, RoutedEventArgs e)
@@ -35,8 +36,8 @@ namespace DentalTech.View
 
         void Inserir()
         {
-            string pacientee = paciente.Text;
-            string profissional = funcionario.Text;
+            string pacientee = Pacientes.Text;
+            string profissional = Funcionarios.Text;
             DateTime? dataSelecionada = data.SelectedDate;
             DateTime? horaSelecionada = hora.SelectedTime;
 
@@ -124,6 +125,44 @@ namespace DentalTech.View
             {
 
                 throw;
+            }
+        }
+        void PreencherComboBox()
+        {
+            try
+            {
+                Conexao conexao = new Conexao();
+                string query = "SELECT nome_pac FROM Paciente";
+
+                using (MySqlCommand command = conexao.Query(query))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Adiciona cada registro ao ComboBox
+                            Pacientes.Items.Add(reader["nome_pac"].ToString());
+                        }
+                    }
+                }
+
+                query = "SELECT nome_func FROM Funcionario";
+
+                using (MySqlCommand command = conexao.Query(query))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Adiciona cada registro ao ComboBox
+                            Funcionarios.Items.Add(reader["nome_func"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
         }
     }
