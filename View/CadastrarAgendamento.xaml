@@ -305,27 +305,11 @@
                             </Grid.RowDefinitions>
 
                             <StackPanel Grid.Row="0" Margin="10 10">
-
-                                <TextBox
-                                    Width="500" HorizontalAlignment="Left"
-                                    FontWeight="Bold"
-                                    FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
-                                    x:Name="paciente"
-                                    materialDesign:HintAssist.Hint="Paciente"
-                                    Style="{StaticResource MaterialDesignOutlinedTextBox}">
-                                </TextBox>
-
+                                <ComboBox x:Name="Pacientes" FontWeight="Bold" Width="500" HorizontalAlignment="Left" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Paciente" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Margin="10 10">
-                                <TextBox
-                                Width="500" HorizontalAlignment="Left"
-                                FontWeight="Bold" FontSize="20"
-                                FontFamily="Century Gothic" Foreground="#112D4E" 
-                                x:Name="funcionario" 
-                                materialDesign:HintAssist.Hint="Profissional"
-                                Style="{StaticResource MaterialDesignOutlinedTextBox}">
-                                </TextBox>
+                                <ComboBox x:Name="Funcionarios" FontWeight="Bold" Width="500" HorizontalAlignment="Left" FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E" materialDesign:HintAssist.Hint="Funcionario" Style="{StaticResource MaterialDesignOutlinedComboBox}"/>
                             </StackPanel>
 
                             <StackPanel Grid.Row="2" Margin="10 10">
