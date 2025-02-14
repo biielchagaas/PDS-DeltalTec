@@ -46,7 +46,7 @@ namespace DentalTech.View
             // Formatando a data para o formato brasileiro
             string dataFormatada = dataa.ToString("yyyy/MM/dd");
 
-            
+
 
             if (string.IsNullOrWhiteSpace(pacientee) || string.IsNullOrWhiteSpace(profissional))
             {
@@ -102,7 +102,7 @@ namespace DentalTech.View
                 query = "INSERT INTO agendamento (data_age, hora_age, id_pac_fk, id_func_fk)" +
                     " VALUES (@data, @hora, @idpaciente, @idfuncionario)";
 
-                using(MySqlCommand command = conexao.Query(query))
+                using (MySqlCommand command = conexao.Query(query))
                 {
                     command.Parameters.AddWithValue("@idpaciente", idPaciente);
                     command.Parameters.AddWithValue("@idfuncionario", idFuncionario);
@@ -125,6 +125,44 @@ namespace DentalTech.View
             {
 
                 throw;
+            }
+        }
+        void PreencherComboBox()
+        {
+            try
+            {
+                Conexao conexao = new Conexao();
+                string query = "SELECT nome_pac FROM Paciente";
+
+                using (MySqlCommand command = conexao.Query(query))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Adiciona cada registro ao ComboBox
+                            Pacientes.Items.Add(reader["nome_pac"].ToString());
+                        }
+                    }
+                }
+
+                query = "SELECT nome_func FROM Funcionario";
+
+                using (MySqlCommand command = conexao.Query(query))
+                {
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Adiciona cada registro ao ComboBox
+                            Funcionarios.Items.Add(reader["nome_func"].ToString());
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
         }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
@@ -201,7 +239,7 @@ namespace DentalTech.View
                 if (selectedItem.Header.ToString() == "Consultar agendamento")
                 {
                     // Abre a nova janela e fecha a atual
-                    
+
 
                     // Fecha a janela atual
                     this.Close();
@@ -314,43 +352,6 @@ namespace DentalTech.View
                     // Fecha a janela atual
                     this.Close();
                 }
-            }
-        void PreencherComboBox()
-        {
-            try
-            {
-                Conexao conexao = new Conexao();
-                string query = "SELECT nome_pac FROM Paciente";
-
-                using (MySqlCommand command = conexao.Query(query))
-                {
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Adiciona cada registro ao ComboBox
-                            Pacientes.Items.Add(reader["nome_pac"].ToString());
-                        }
-                    }
-                }
-
-                query = "SELECT nome_func FROM Funcionario";
-
-                using (MySqlCommand command = conexao.Query(query))
-                {
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Adiciona cada registro ao ComboBox
-                            Funcionarios.Items.Add(reader["nome_func"].ToString());
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao acessar o banco de dados: " + ex.Message);
             }
         }
     }
