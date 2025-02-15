@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DentalTech.Database;
+using DentalTech.Models;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +25,60 @@ namespace DentalTech.View
         public ConsultarDespesa()
         {
             InitializeComponent();
+        }
+        public void Delete(ConsultarDespes t)
+        {
+            Conexao conn = null; // Declara a conexão antes do try
+
+            try
+            {
+                conn = new Conexao(); // Inicializa a conexão corretamente
+                MySqlCommand query = conn.Query("DELETE FROM despesa WHERE id_desp = @id"); // Usa corretamente o método Query()
+
+                query.Parameters.AddWithValue("@id", t.Id); // Usa t.Id corretamente
+
+                int result = query.ExecuteNonQuery(); // Executa a query
+
+                if (result == 0)
+                    throw new Exception("Registro de despesa não removido da base de dados. Verifique e tente novamente.");
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao deletar a despesa: " + e.Message);
+            }
+            finally
+            {
+                if (conn != null) // Garante que a conexão foi iniciada antes de fechar
+                {
+                    conn.Close();
+                }
+            }
+        }
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            var despesaSelected = dataGrid.SelectedItem as ConsultarDespes;
+
+            var result = MessageBox.Show($"Deseja realmente remover a despesa '{despesaSelected.Id}'?",
+                "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ConsultarDespesa();
+                    dao.Delete(despesaSelected);
+                    LoadDataGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void LoadDataGrid()
+        {
+            throw new NotImplementedException();
         }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {

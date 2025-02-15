@@ -144,6 +144,12 @@
     <Compile Include="Models\CadastrarServico.cs" />
     <Compile Include="Models\CadastrarServicoVenda.cs" />
     <Compile Include="Models\CadastrarVenda.cs" />
+    <Compile Include="Models\ConsultarAnam.cs" />
+    <Compile Include="Models\ConsultarConsult.cs" />
+    <Compile Include="Models\ConsultarDespes.cs" />
+    <Compile Include="Models\ConsultarOrcament.cs" />
+    <Compile Include="Models\ConsultarServic.cs" />
+    <Compile Include="Models\ConsultarProdut.cs" />
     <Compile Include="View\CadastrarOrcamento.xaml.cs">
       <DependentUpon>CadastrarOrcamento.xaml</DependentUpon>
     </Compile>

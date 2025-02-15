@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DentalTech.Database;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +10,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using MySql.Data.MySqlClient;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static MaterialDesignThemes.Wpf.Theme;
+using DentalTech.Models;
 
 namespace DentalTech.View
 {
@@ -23,6 +28,64 @@ namespace DentalTech.View
         {
             InitializeComponent();
         }
+
+
+        public void Delete(ConsultarAnam t)
+    {
+        Conexao conn = null; // Declara a conexão antes do try
+
+        try
+        {
+            conn = new Conexao(); // Inicializa a conexão corretamente
+            MySqlCommand query = conn.Query("DELETE FROM anamnese WHERE id_anam = @id"); // Usa corretamente o método Query()
+
+            query.Parameters.AddWithValue("@id", t.Id); // Usa t.Id corretamente
+
+            int result = query.ExecuteNonQuery(); // Executa a query
+
+            if (result == 0)
+                throw new Exception("Registro de anamnese não removido da base de dados. Verifique e tente novamente.");
+        }
+        catch (Exception e)
+        {
+            throw new Exception("Erro ao deletar a anamnese: " + e.Message);
+        }
+        finally
+        {
+            if (conn != null) // Garante que a conexão foi iniciada antes de fechar
+            {
+                conn.Close();
+            }
+        }
+    }
+
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            var anamneseSelected = dategrid.SelectedItem as ConsultarAnam;
+
+            var result = MessageBox.Show($"Deseja realmente remover a anamnese do paciente '{anamneseSelected.Id}'?",
+                "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ConsultarAnamnese();
+                    dao.Delete(anamneseSelected);
+                    LoadDataGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void LoadDataGrid()
+        {
+            throw new NotImplementedException();
+        }
+
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             // Obtém o item selecionado no TreeView

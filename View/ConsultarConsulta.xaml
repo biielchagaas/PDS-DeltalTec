@@ -200,7 +200,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </StackPanel>
             </Grid>
             <Grid>
-                <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="450" />
+                <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="450" Name ="dataGrid"/>
             </Grid>
             <Grid>
                 <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 0 10">
@@ -220,7 +220,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
+                <Button Grid.Column="0" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" Click="BtnExcluir_Click" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
                     <WrapPanel VerticalAlignment="Center">
                         <Image Source="../Resource/IconExcluir.png" Width="30" />
                         <Label Content="Excluir" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />

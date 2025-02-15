@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DentalTech.Database;
+using DentalTech.Models;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace DentalTech.View
 {
@@ -22,6 +26,60 @@ namespace DentalTech.View
         public ConsultarOrcamento()
         {
             InitializeComponent();
+        }
+        public void Delete(ConsultarOrcament t)
+        {
+            Conexao conn = null; // Declara a conexão antes do try
+
+            try
+            {
+                conn = new Conexao(); // Inicializa a conexão corretamente
+                MySqlCommand query = conn.Query("DELETE FROM orcamento WHERE id_orca = @id"); // Usa corretamente o método Query()
+
+                query.Parameters.AddWithValue("@id", t.Id); // Usa t.Id corretamente
+
+                int result = query.ExecuteNonQuery(); // Executa a query
+
+                if (result == 0)
+                    throw new Exception("Registro de orçamento não removido da base de dados. Verifique e tente novamente.");
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao deletar o orçamento: " + e.Message);
+            }
+            finally
+            {
+                if (conn != null) // Garante que a conexão foi iniciada antes de fechar
+                {
+                    conn.Close();
+                }
+            }
+        }
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            var orcamentoSelected = dataGrid.SelectedItem as ConsultarOrcament;
+
+            var result = MessageBox.Show($"Deseja realmente remover o orçamento  '{orcamentoSelected.Id}'?",
+                "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ConsultarOrcamento();
+                    dao.Delete(orcamentoSelected);
+                    LoadDataGrid();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void LoadDataGrid()
+        {
+            throw new NotImplementedException();
         }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
@@ -212,5 +270,6 @@ namespace DentalTech.View
                 }
             }
         }
+
     }
 }
