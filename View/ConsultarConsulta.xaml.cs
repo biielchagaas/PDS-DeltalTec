@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentalTech.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,45 @@ namespace DentalTech.View
         public ConsultarConsulta()
         {
             InitializeComponent();
+            Loaded += ConsultarConsulta_Loaded;
+        }
+        private void ConsultarConsulta_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new ConsultaDAO();
+                List<Consulta> listasConsulta = dao.List();
+                dataGridConsulta.ItemsSource = listasConsulta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnExcluirConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            var consultaSelected = dataGridConsulta.SelectedItem as Consulta;
+
+            var result = MessageBox.Show($"Deseja realmente excluir a consulta de '{consultaSelected.PacienteConsulta}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ConsultaDAO();
+                    dao.Delete(consultaSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {

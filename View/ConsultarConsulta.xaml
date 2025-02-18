@@ -177,7 +177,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="10">
             <WrapPanel>
-                <TextBlock Text="CONSULTAR DESPESA" HorizontalAlignment="Left" FontSize="40" FontFamily="Century Gothic" FontWeight="bold" Margin="30" Foreground="#112D4E" />
+                <TextBlock Text="CONSULTAR CONSULTA" HorizontalAlignment="Left" FontSize="40" FontFamily="Century Gothic" FontWeight="bold" Margin="30" Foreground="#112D4E" />
             </WrapPanel>
             <Grid Width="auto" Height="auto">
                 <StackPanel>
@@ -188,7 +188,6 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                             <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
                         </StackPanel>
                     </Grid>
-                    <Button Content="Buscar" Margin="10" Height="55" Width="120" Background="#FF3F72AF" />
                 </StackPanel>
             </Grid>
             <Grid>
@@ -200,51 +199,60 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                 </StackPanel>
             </Grid>
             <Grid>
-                <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="450" />
+                <DataGrid Background="#F9F7F7" x:Name="dataGridConsulta" AutoGenerateColumns="False" CanUserAddRows="False"  IsReadOnly="True" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="350">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Data" Binding="{Binding Data, StringFormat=d}" Foreground="Black" FontSize="24"/>
+                        <DataGridTextColumn Header="Hora" Binding="{Binding Hora}" Foreground="Black" FontSize="24"/>
+                        <DataGridTextColumn Header="Valor" Binding="{Binding Valor, StringFormat={}{0:C}, ConverterCulture=pt-BR}"  Foreground="Black" FontSize="24"/>
+                        <DataGridTextColumn Header="Paciente" Binding="{Binding PacienteConsulta}" Foreground="Black" FontSize="24"/>
+                        <DataGridTextColumn Header="Funcionário" Binding="{Binding FuncionarioConsulta}" Foreground="Black" FontSize="24"/>
+
+                        <DataGridTemplateColumn Header="Ações">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button
+        Grid.Column="1" Height="50" Background="#F9F7F7"
+        BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
+        materialDesign:ButtonAssist.CornerRadius="10"
+        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+        Style="{StaticResource MaterialDesignRaisedButton}"
+        ToolTip="MaterialDesignRaisedButton with Round Corners">
+
+                                            <WrapPanel VerticalAlignment="Center">
+                                                <Image Source="../Resource/BotaoEditar.png" Width= "30"/>
+                                                <Label Content="Editar" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold"/>
+                                            </WrapPanel>
+                                        </Button>
+                                        <Button Grid.Column="0" Height="50" Background="#F9F7F7" x:Name="btnExcluirConsulta" Click="btnExcluirConsulta_Click" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10"
+        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+        Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
+                                            <WrapPanel VerticalAlignment="Center">
+                                                <Image Source="../Resource/IconExcluir.png" Width= "30"/>
+                                                <Label Content="Excluir" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold"/>
+                                            </WrapPanel>
+                                        </Button>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
-            <Grid>
-                <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="10 0 0 10">
-                    <RadioButton GroupName="CampoBusca" Content="Nome" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0" />
-                    <RadioButton GroupName="CampoBusca" Content="Profissional" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0" />
-                    <RadioButton GroupName="CampoBusca" Content="Todos" FontSize="20" FontFamily="Century Gothic" Margin="0 0 10 0" />
-                    <RadioButton GroupName="CampoBusca" Content="Horário" FontSize="20" FontFamily="Century Gothic" />
-                </StackPanel>
-            </Grid>
-            <Grid>
-                <DataGrid Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10" Height="400" />
-            </Grid>
+
             <Grid Margin="80 10 80 10" VerticalAlignment="Center" Width="600">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
+                
                 <Button Grid.Column="0" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
                     <WrapPanel VerticalAlignment="Center">
-                        <Image Source="../Resource/IconExcluir.png" Width="30" />
-                        <Label Content="Excluir" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />
-                    </WrapPanel>
-                </Button>
-                <Button Grid.Column="1" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
-                    <WrapPanel VerticalAlignment="Center">
                         <Image Source="../Resource/BotaoNovo.png" Width="30" />
                         <Label Content="Novo" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />
                     </WrapPanel>
                 </Button>
                 <Button Grid.Column="1" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
-                    <WrapPanel VerticalAlignment="Center">
-                        <Image Source="../Resource/BotaoEditar.png" Width="30" />
-                        <Label Content="Editar" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />
-                    </WrapPanel>
-                </Button>
-                <Button Grid.Column="2" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
-                    <WrapPanel VerticalAlignment="Center">
-                        <Image Source="../Resource/BotaoNovo.png" Width="30" />
-                        <Label Content="Novo" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />
-                    </WrapPanel>
-                </Button>
-                <Button Grid.Column="3" Height="50" Background="#F9F7F7" BorderBrush="#112D4E" BorderThickness="1" Margin="10 2" materialDesign:ButtonAssist.CornerRadius="10" IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Style="{StaticResource MaterialDesignRaisedButton}" ToolTip="MaterialDesignRaisedButton with Round Corners">
                     <WrapPanel VerticalAlignment="Center">
                         <Image Source="../Resource/BotaoEmitir.png" Width="30" />
                         <Label Content="Emitir" FontSize="15" FontFamily="Century Gothic" Foreground="#112D4E" VerticalAlignment="Center" FontWeight="Bold" />
