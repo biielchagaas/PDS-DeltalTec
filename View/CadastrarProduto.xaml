@@ -34,15 +34,16 @@ Header="Cadastrar funcionário" Margin="0" FontSize="15"/>
                     <TreeViewItem
 FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
 Header="Consultar funcionário" Margin="0" FontSize="15"/>
-                    
+
                     <Button
     FontWeight="Light" Foreground="#F9F7F7" BorderBrush="Transparent"
     Content="Emitir relatório" Margin="0" FontSize="15"
     materialDesign:ButtonAssist.CornerRadius= "5"
     IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-    Style="{StaticResource MaterialDesignRaisedButton}"
+    
+                        Style="{StaticResource MaterialDesignRaisedButton}"
     ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
-                    
+
                 </TreeViewItem>
 
                 <TreeViewItem Header= "Financeiro" FontFamily="century gothic" FontWeight="Bold" FontSize="15" Foreground="#F9F7F7">
@@ -204,12 +205,12 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="1.5*"/>
                             <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="1*"/>                            
+                            <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Column="0" Margin="10 10">
 
-                            <TextBox
+                            <TextBox x:Name="nome"
                             FontWeight="Bold"
                             FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                             
@@ -220,7 +221,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <DatePicker
+                            <DatePicker x:Name="dataFab"
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data de fabricação"
@@ -228,14 +229,14 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="2" Margin="10 10">
-                            <DatePicker
+                            <DatePicker x:Name="dataVenc"
                               FontWeight="Bold"
                               FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                               materialDesign:HintAssist.Hint="Data de vencimento"
                               Style="{StaticResource MaterialDesignOutlinedDatePicker}" Height="58" />
                         </StackPanel>
 
-                        
+
                     </Grid>
 
                     <Grid>
@@ -245,7 +246,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Grid.Column="0" Margin="10 10">
-                            <TextBox
+                            <TextBox x:Name="codigo"
                             FontWeight="Bold"
                             FontSize="20" FontFamily="Century Gothic" Foreground="#112D4E"
                             
@@ -255,7 +256,7 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         </StackPanel>
 
                         <StackPanel Grid.Column="1" Margin="10 10">
-                            <TextBox
+                            <TextBox x:Name="valor"
                                 materialDesign:TextFieldAssist.PrefixText="$"
                                 
                                 FontWeight="Bold"
@@ -267,9 +268,9 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                             </TextBox>
                         </StackPanel>
 
-                        
 
-                        
+
+
                     </Grid>
 
 
@@ -284,11 +285,11 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
 
                         <Button
                             Grid.Column="0" Height="50" Background="#F9F7F7"
-                            BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
+                            BorderBrush="#112D4E" BorderThickness="1" Margin="10,2,0,2"
                             materialDesign:ButtonAssist.CornerRadius="10"
                             IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                             Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="MaterialDesignRaisedButton with Round Corners">
+                            ToolTip="MaterialDesignRaisedButton with Round Corners" HorizontalAlignment="Left" Width="180">
 
                             <WrapPanel VerticalAlignment="Center">
                                 <Image Source="../Resource/BotaoSalvar.png" Width= "30"/>

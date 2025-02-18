@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DentalTech.Database;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,59 @@ namespace DentalTech.View
         public CadastrarProduto()
         {
             InitializeComponent();
+        }
+
+        void Inserir()
+        {
+            string nomee = nome.Text;
+            DateTime? dataFabricacao = dataFab.SelectedDate;
+            DateTime? dataVencimento = dataVenc.SelectedDate;
+            string codigoo = codigo.Text;
+            double valorr = Convert.ToDouble(valor.Text);
+
+            DateTime datafab = dataFabricacao.Value;
+            DateTime datavenc = dataVencimento.Value;
+
+            string FabricacaoFormatada = datafab.ToString("yyyy/MM/dd");
+            string VencimentoFormatado = datavenc.ToString("yyyy/MM/dd");
+
+            try
+            {
+                Conexao conexao = new Conexao();
+
+                string query = "INSERT INTO PRODUTO (nome_prod, dataFabricacao_prod, dataValidade_prod, codigoBarras_prod, " +
+                    "valor_prod) values (@Nome_prod, @Fabricacao_prod, @Vencimento_prod, @CodigoBarras_prod, @Valor_prod);";
+
+                using (MySqlCommand command = conexao.Query(query))
+                {
+
+                    command.Parameters.AddWithValue("@Nome_prod", nomee);
+                    command.Parameters.AddWithValue("@Fabricacao_prod", FabricacaoFormatada);
+                    command.Parameters.AddWithValue("@Vencimento_prod", VencimentoFormatado);
+                    command.Parameters.AddWithValue("@CodigoBarras_prod", codigoo);
+                    command.Parameters.AddWithValue("@Valor_prod", valorr);
+
+                    var result = command.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar produto.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+
+
+                }
+            }
+            catch(Exception)
+            {
+
+                throw;
+
+            }
+
         }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
@@ -211,6 +266,11 @@ namespace DentalTech.View
                     this.Close();
                 }
             }
+        }
+
+        private void Salvar(object sender, RoutedEventArgs e)
+        {
+            Inserir();
         }
     }
 }
