@@ -24,14 +24,30 @@ namespace DentalTech.View
     /// </summary>
     public partial class CadastrarAnamnese : Window
     {
+        private static Conexao con;
         public CadastrarAnamnese()
         {
+           
             InitializeComponent();
             PreencherComboBox();
         }
         private void Salvar(object sender, RoutedEventArgs e)
         {
             Inserir();
+        }
+        
+        public CadastrarAnamnese GetById(int id)
+        {
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
         }
 
         void Inserir ()

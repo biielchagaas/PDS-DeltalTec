@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DentalTech.Models;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,50 @@ namespace DentalTech.View
         public ConsultarOrcamento()
         {
             InitializeComponent();
+            Loaded += ConsultarOrcamento_Loaded;
         }
+
+        private void ConsultarOrcamento_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new OrcamentoDAO();
+                List<Orcamento> listaOrcamento = dao.List();
+                dataGridOrcamento.ItemsSource = listaOrcamento;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirOrcamento_Click(object sender, RoutedEventArgs e)
+        {
+            var orcamentoSelected = dataGridOrcamento.SelectedItem as Orcamento;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Orçamento '{orcamentoSelected.Descricao}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new OrcamentoDAO();
+                    dao.Delete(orcamentoSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             // Obtém o item selecionado no TreeView

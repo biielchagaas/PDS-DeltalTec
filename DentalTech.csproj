@@ -128,22 +128,30 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Models\CadastrarAgendamento.cs" />
-    <Compile Include="Models\CadastrarAnamnese.cs" />
+    <Compile Include="Models\Anamnese.cs" />
     <Compile Include="Models\CadastrarCaixa.cs" />
     <Compile Include="Models\CadastrarCliente.cs" />
     <Compile Include="Models\CadastrarCompraProduto.cs" />
-    <Compile Include="Models\CadastrarConsulta.cs" />
+    <Compile Include="Models\Consulta.cs" />
     <Compile Include="Models\CadastrarDespesa.cs" />
     <Compile Include="Models\CadastrarFornecedor.cs" />
-    <Compile Include="Models\CadastrarFuncionario.cs" />
+    <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\CadastrarItensCompra.cs" />
-    <Compile Include="Models\CadastrarOrcamento.cs" />
+    <Compile Include="Models\ConsultaDAO.cs" />
+    <Compile Include="Models\FuncionarioDAO.cs" />
+    <Compile Include="Models\Orcamento.cs" />
+    <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\CadastrarPagamento.cs" />
     <Compile Include="Models\CadastrarRecebimento.cs" />
-    <Compile Include="Models\CadastrarServico.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\ProdutoDAO.cs" />
+    <Compile Include="Models\Servico.cs" />
     <Compile Include="Models\CadastrarServicoVenda.cs" />
     <Compile Include="Models\CadastrarVenda.cs" />
+    <Compile Include="Models\OrcamentoDAO.cs" />
+    <Compile Include="Models\ServicoDAO.cs" />
     <Compile Include="View\CadastrarOrcamento.xaml.cs">
       <DependentUpon>CadastrarOrcamento.xaml</DependentUpon>
     </Compile>

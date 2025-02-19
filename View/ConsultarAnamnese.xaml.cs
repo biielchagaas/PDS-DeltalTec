@@ -23,6 +23,13 @@ namespace DentalTech.View
         {
             InitializeComponent();
         }
+
+        private void IrAnamnese(object sender, RoutedEventArgs e)
+        {
+            CadastrarAnamnese s = new CadastrarAnamnese();
+            s.Show();
+            this.Close();
+        }
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             // Obtém o item selecionado no TreeView

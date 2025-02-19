@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentalTech.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,50 @@ namespace DentalTech.View
         public ConsultarFuncionario()
         {
             InitializeComponent();
+            Loaded += ConsultarFuncionario_Loaded;
         }
+
+        private void ConsultarFuncionario_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new FuncionarioDAO();
+                List<Funcionario> listaFuncionario = dao.List();
+                dataGridFuncionario.ItemsSource = listaFuncionario;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            var funcionarioSelected = dataGridFuncionario.SelectedItem as Funcionario;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Funcionário '{funcionarioSelected.Nome}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new FuncionarioDAO();
+                    dao.Delete(funcionarioSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void MainTreeVie_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             // Obtém o item selecionado no TreeView

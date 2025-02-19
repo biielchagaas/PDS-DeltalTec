@@ -50,6 +50,22 @@ namespace DentalTech.Database
             }
         }
 
+        public MySqlCommand Query()
+        {
+            try
+            {
+                command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+
+
+                return command;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void Close()
         {
             connection.Close();
