@@ -106,7 +106,7 @@ namespace DentalTech.View
                     }
                     else
                     {
-                        MessageBox.Show("Erro ao cadastrar agendamento.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Erro ao cadastrar funcionário.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
 
                 }

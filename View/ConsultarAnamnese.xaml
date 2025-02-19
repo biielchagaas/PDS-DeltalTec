@@ -267,8 +267,8 @@ ToolTip="MaterialDesignRaisedButton with Round Corners" Background="{x:Null}"/>
                         BorderBrush="#112D4E" BorderThickness="1" Margin="10 2"
                         materialDesign:ButtonAssist.CornerRadius="10"
                         IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                        Style="{StaticResource MaterialDesignRaisedButton}"
-                        ToolTip="MaterialDesignRaisedButton with Round Corners">
+                        Style="{StaticResource MaterialDesignRaisedButton}" Click="IrAnamnese"
+                        ToolTip="MaterialDesignRaisedButton with Round Corners" Cursor="Hand">
                                     <WrapPanel VerticalAlignment="Center">
                                         <Image Source="../Resource/BotaoEditar.png" Width= "30"/>
                                         <Label Content="Editar" FontSize="15" FontFamily="Century Gothic"
